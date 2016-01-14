@@ -28,11 +28,11 @@ strongSelf.nextVibration()
 
 */
 
-typealias DispatchBlock = ()->Void
+public typealias DispatchBlock = ()->Void
 
-public class Dispatch
+public final class Dispatch
 {
-    public class func after(delay:Double, closure:()->Void) {
+    public final class func after(delay:Double, closure:()->Void) {
         
         dispatch_after(
             dispatch_time(
@@ -43,7 +43,7 @@ public class Dispatch
         
     }
     
-    public class func async(priority: Int = DISPATCH_QUEUE_PRIORITY_DEFAULT, closure:()->()) {
+    public final class func async(priority: Int = DISPATCH_QUEUE_PRIORITY_DEFAULT, closure:()->()) {
         
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -53,7 +53,7 @@ public class Dispatch
         
     }
     
-    public class func toMainThread(closure:()->()) {
+    public final class func toMainThread(closure:()->()) {
         
         dispatch_async(dispatch_get_main_queue()) {
             NSOperationQueue.mainQueue().addOperationWithBlock {
