@@ -14,5 +14,4 @@ FOUNDATION_EXPORT double LeapfrogVersionNumber;
 //! Project version string for Leapfrog.
 FOUNDATION_EXPORT const unsigned char LeapfrogVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <Leapfrog/PublicHeader.h>
-
+// In this header, you should import the public headers of your framework using: #import <Leapfrog/PublicHeader.h>
